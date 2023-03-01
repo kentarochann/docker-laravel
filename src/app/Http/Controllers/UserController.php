@@ -29,15 +29,11 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request);
         $user = new User;
         $user->name = $request->name;
         $user->password = $request->password;
         $user->email = $request->email;
-        // dd($user);
         $user->save();
-
-
     }
 
     /**
