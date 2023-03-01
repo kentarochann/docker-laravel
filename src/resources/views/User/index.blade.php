@@ -18,8 +18,13 @@
     @empty
         <div>ユーザーは存在しません</div>
     @endforelse
-    <a href="{{ route('top') }}">
-        Topへ
-    </a>
+    <div>
+        <a href="{{ route('users.create') }}">
+            create user
+        </a>
+    </div>
+    <div>
+        <a href="{{ route('top') }}">Topへ</a>
+    </div>
 </body>
 </html>

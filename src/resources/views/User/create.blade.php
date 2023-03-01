@@ -8,7 +8,7 @@
 </head>
 <body>
     <p>User create</p>
-    {{ Form::open([route('user.store')]) }}
+    {{ Form::open([route('users.store')]) }}
         <div>
             {{ Form::label('name', '氏名：') }}
             {{ Form::text('name', null, ['class' => 'form-control', 'placeholder' => '氏名'])}}
@@ -25,5 +25,10 @@
             {{ Form::submit('送信') }}
         </div>
     {{ Form::close() }}
+    <div>
+        <a href="{{ route('users.index') }}">
+            users index
+        </a>
+    </div>
 </body>
 </html>
