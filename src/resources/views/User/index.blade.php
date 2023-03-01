@@ -7,6 +7,19 @@
     <title>ユーザーindex</title>
 </head>
 <body>
-    <h1>ユーザー一覧</h1>
+    <h1>user index</h1>
+    @forelse($users as $user)
+        <div>{{ $user->name }}</div>
+        <div>{{ $user->email }}</div>
+        <div>
+            {{ $user->password }}
+            ※パスワードなので、この欄は消す
+        </div>
+    @empty
+        <div>ユーザーは存在しません</div>
+    @endforelse
+    <a href="{{ route('top') }}">
+        Topへ
+    </a>
 </body>
 </html>

@@ -16,11 +16,11 @@ use App\Http\Controllers\UserController;
 */
 
 // 最初のページ
-Route::get('/', [TopController::class, 'index'])->name('top.index');
+Route::get('/', [TopController::class, 'index'])->name('top');
 
 // ユーザー
 Route::prefix('users')->group(function (){
-    Route::get('/', [UserController::class, 'index'])->name('user.index');
-    Route::get('/create', [UserController::class, 'create'])->name('user.create');
-    Route::post('/create', [UserController::class, 'store'])->name('user.store');
+    Route::get('/', [UserController::class, 'index'])->name('users.index');
+    Route::get('/create', [UserController::class, 'create'])->name('users.create');
+    Route::post('/create', [UserController::class, 'store'])->name('users.store');
 });

@@ -7,6 +7,9 @@
     <title>first page</title>
 </head>
 <body>
-    <h2>Hello world</h2>
+    <h2>top page</h2>
+    <a href="{{ route('users.index') }}">
+        user index
+    </a>
 </body>
 </html>
