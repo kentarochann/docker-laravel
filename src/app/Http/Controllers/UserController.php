@@ -14,7 +14,7 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
-        return view('User.index', compact('users'));
+        return view('user.index', compact('users'));
     }
 
     /**
@@ -24,7 +24,7 @@ class UserController extends Controller
     {
         // todo　ユーザーを作成する
         // todo　ユーザー一覧を整える
-        return view('User.create');
+        return view('user.create');
     }
 
     /**
