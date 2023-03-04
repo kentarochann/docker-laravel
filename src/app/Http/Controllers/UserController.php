@@ -22,6 +22,8 @@ class UserController extends Controller
      */
     public function create()
     {
+        // todo　ユーザーを作成する
+        // todo　ユーザー一覧を整える
         return view('User.create');
     }
 
@@ -30,13 +32,14 @@ class UserController extends Controller
      */
     public function store(UserRequest $request)
     {
+        //todo バリデーションメッセージ追加
         $user = new User;
         $user->name = $request->name;
         $user->password = $request->password;
         $user->email = $request->email;
         $user->save();
 
-        return redirect()->route('users.index');
+        return redirect()->route('users.index', ['msg' => 'OK']);
     }
 
     /**
