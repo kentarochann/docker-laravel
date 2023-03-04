@@ -1,15 +1,26 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>first page</title>
-</head>
-<body>
-    <h2>top page</h2>
-    <a href="{{ route('users.index') }}">
-        user index
-    </a>
-</body>
-</html>
+@extends('layouts.app')
+
+@section('title', 'top page')
+
+@section('content')
+
+<h2>top page</h2>
+<a href="{{ route('users.index') }}">
+    user index
+</a>
+
+@endsection
+
+@section('js')
+
+<script>
+
+console.log('Hello :)');
+
+// $(function(){ // if document is ready
+//   alert('jQuery is ready.')
+// });
+
+</script>
+
+@endsection

@@ -21,7 +21,7 @@ class UserRequest extends FormRequest
      */
     public function rules(): array
     {
-        // todo jq バリデーションメッセージJSで
+        // todoJq バリデーションメッセージJSで
 
         return [
             'email' => 'required|unique:users',
