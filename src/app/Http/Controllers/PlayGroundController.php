@@ -2,19 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\UserRequest;
-use App\Models\User;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class PlaygroundController extends Controller
 {
-    /**s
+    /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $users = User::all();
-        return view('user.index', compact('users'));
+        return view('pg.index');
     }
 
     /**
@@ -22,25 +19,15 @@ class UserController extends Controller
      */
     public function create()
     {
-        // todo　ユーザーを作成する
-        // todo　ユーザー一覧を整える
-        return view('user.create');
+        //
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(UserRequest $request)
+    public function store(Request $request)
     {
-        // Userモデルを作成する
-
-        $user = new User;
-        $user->name = $request->name;
-        $user->password = $request->password;
-        $user->email = $request->email;
-        $user->save();
-
-        return redirect()->route('users.index')->with('flash_message', '登録が完了しました');
+        //
     }
 
     /**
@@ -72,6 +59,6 @@ class UserController extends Controller
      */
     public function destroy(string $id)
     {
-        // todo ユーザー削除処理
+        //
     }
 }

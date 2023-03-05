@@ -9,6 +9,10 @@
     user index
 </a>
 
+<div>
+    <a href="{{ route('pg.index') }}">play ground</a>
+</div>
+
 @endsection
 
 @section('js')
