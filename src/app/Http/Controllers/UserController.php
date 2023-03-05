@@ -32,14 +32,13 @@ class UserController extends Controller
      */
     public function store(UserRequest $request)
     {
-        //todo バリデーションメッセージ追加
         $user = new User;
         $user->name = $request->name;
         $user->password = $request->password;
         $user->email = $request->email;
         $user->save();
 
-        return redirect()->route('users.index', ['msg' => 'OK']);
+        return redirect()->route('users.index')->with('flash_message', '登録が完了しました');
     }
 
     /**
@@ -71,6 +70,6 @@ class UserController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        // todo ユーザー削除処理
     }
 }

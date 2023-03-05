@@ -5,6 +5,11 @@
 @section('content')
 
 <h1>user index</h1>
+    @if (session('flash_message'))
+        <div>
+            <div class="flash-message">{{ session('flash_message') }}</div>
+        </div>
+    @endif
     @forelse($users as $user)
         <div>{{ $user->name }}</div>
         <div>{{ $user->email }}</div>
