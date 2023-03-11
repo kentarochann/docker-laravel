@@ -23,10 +23,15 @@ Route::get('/', [TopController::class, 'index'])->name('top');
 Route::prefix('users')->group(function (){
     Route::get('/', [UserController::class, 'index'])->name('users.index');
     Route::get('/create', [UserController::class, 'create'])->name('users.create');
+    Route::get('/show/{id}', [UserController::class, 'show'])->name('users.show');
     Route::post('/create', [UserController::class, 'store'])->name('users.store');
+    Route::delete('/destroy/{id}', [UserController::class, 'destroy'])->name('users.destroy');
 });
 
 // play ground
 Route::prefix('pg')->group(function (){
     Route::get('/', [PlaygroundController::class, 'index'])->name('pg.index');
 });
+
+// todo API受け取りも試す
+

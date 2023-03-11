@@ -48,7 +48,10 @@ class UserController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $user = User::where('id', $id)->first();
+
+        return view('user.show', compact(['user']));
+
     }
 
     /**
@@ -72,6 +75,10 @@ class UserController extends Controller
      */
     public function destroy(string $id)
     {
-        // todo ユーザー削除処理
+        $user = User::where('id', $id)->first();
+        $user->delete();
+
+        return redirect()->route('users.index')->with('flash_message',  "$user->name を削除しました");
+
     }
 }

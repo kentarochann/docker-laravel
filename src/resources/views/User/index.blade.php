@@ -11,7 +11,11 @@
         </div>
     @endif
     @forelse($users as $user)
-        <div>{{ $user->name }}</div>
+        <div>
+            <a href="{{ route('users.show', $user->id) }}">
+                {{ $user->name }}
+            </a>
+        </div>
         <div>{{ $user->email }}</div>
         <div>
             {{ $user->password }}
