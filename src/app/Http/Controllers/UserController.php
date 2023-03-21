@@ -64,9 +64,15 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
-        //
+
+        $user = User::where('id', $id)->first();
+        $user->fill($request->all());
+        $user->update();
+
+        return redirect()->route('users.show', $user->id)->with('flash_message', 'ユーザー情報を更新しました。');
+
     }
 
     /**

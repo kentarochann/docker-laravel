@@ -1,5 +1,17 @@
+.user_name_group {
+  display: flex;
+}
+
+.user_email_group {
+  display: flex;
+}
+
 .user_name {
   text-decoration: none;
+  padding-left: 20px;
+}
+
+.user_email {
   padding-left: 20px;
 }
 

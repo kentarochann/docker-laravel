@@ -1,7 +1,22 @@
 
+// todo user_name/emialここまとめてリファクタできる？
+
+.user_name_group{
+    display: flex;
+}
+
+.user_email_group{
+    display: flex;
+}
+
 .user_name{
     // color:red;
     text-decoration: none;
+    padding-left: 20px;
+}
+
+.user_email{
+    // color:red;
     padding-left: 20px;
 }
 

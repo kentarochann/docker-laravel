@@ -23,8 +23,9 @@ Route::get('/', [TopController::class, 'index'])->name('top');
 Route::prefix('users')->group(function (){
     Route::get('/', [UserController::class, 'index'])->name('users.index');
     Route::get('/create', [UserController::class, 'create'])->name('users.create');
-    Route::get('/show/{id}', [UserController::class, 'show'])->name('users.show');
     Route::post('/create', [UserController::class, 'store'])->name('users.store');
+    Route::get('/show/{id}', [UserController::class, 'show'])->name('users.show');
+    Route::post('/update/{id}', [UserController::class, 'update'])->name('users.update');
     Route::delete('/destroy/{id}', [UserController::class, 'destroy'])->name('users.destroy');
 });
 

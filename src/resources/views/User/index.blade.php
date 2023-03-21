@@ -13,17 +13,26 @@
     @forelse($users as $user)
         <div class="user_list">
             <div>
+                <div>id: {{ $user->id }}</div>
                 <div>user name</div>
-                <a href="{{ route('users.show', $user->id) }}" class="user_name">
-                    {{ $user->name }}
-                </a>
+                <div class="user_name_group">
+                    <div>=></div>
+                    <div>
+                        <a href="{{ route('users.show', $user->id) }}" class="user_name">
+                            {{ $user->name }}
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div>{{ $user->email }}</div>
             <div>
-                {{ $user->password }}
-                ※パスワードなので、この欄は消す
+                <div>user email</div>
+                <div class="user_email_group">
+                    <div>=></div>
+                    <div class="user_email">{{ $user->name }}</div>
+                </div>
             </div>
         </div>
+        <hr>
     @empty
         <div>ユーザーは存在しません</div>
     @endforelse
