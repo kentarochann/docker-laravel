@@ -22,7 +22,6 @@ class UserController extends Controller
      */
     public function create()
     {
-        // todo　ユーザー一覧を整える
         return view('user.create');
     }
 

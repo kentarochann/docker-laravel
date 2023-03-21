@@ -2,7 +2,14 @@
 
 @section('title', 'user index')
 
+@section('css')
+    <link rel="stylesheet" href="{{ asset('/css/user_index.css')  }}" >
+@endsection
+
 @section('content')
+
+{{-- todo headerをつける, Topへ戻るやつ --}}
+
 
 <h1 class="">user index</h1>
     @if (session('flash_message'))
