@@ -29,9 +29,9 @@ Route::prefix('users')->group(function (){
 });
 
 // play ground
+// todo API受け取りも試す
 Route::prefix('pg')->group(function (){
     Route::get('/', [PlaygroundController::class, 'index'])->name('pg.index');
 });
 
-// todo API受け取りも試す
 
