@@ -8,10 +8,17 @@
         @yield('title')
     </title>
     <link rel="stylesheet" href="{{ asset('/css/style.css')  }}" >
+    <link rel="icon" href="/img/laravel-icon-497x512.png" sizes="32x32" />
     @yield('css')
 </head>
 <body>
-
+    <header>
+        <div class="toppage_title">
+            <h1>
+                <a href="/">Laravel Page</a>
+            </h1>
+        </div>
+    </header>
 @yield('content')
 
 {{-- jquery読み込み --}}
