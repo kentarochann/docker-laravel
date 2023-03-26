@@ -8,9 +8,6 @@
 
 @section('content')
 
-{{-- todo headerをつける, Topへ戻るやつ --}}
-
-
 <h1 class="">user index</h1>
     @if (session('flash_message'))
         <div>
