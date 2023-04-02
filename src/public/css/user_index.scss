@@ -1,4 +1,6 @@
 
+@import "foundation/_mixin";
+
 // todo user_name/emialここまとめてリファクタできる？
 
 .user_name_group{
@@ -20,6 +22,10 @@
 
 .user_list{
     padding: 10px;
+
+    .user_id{
+        @include sp{
+            background-color: red;
+        }
+    }
 }
-
-

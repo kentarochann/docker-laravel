@@ -17,7 +17,7 @@
     @forelse($users as $user)
         <div class="user_list">
             <div>
-                <div>id: {{ $user->id }}</div>
+                <div class="user_id">id: {{ $user->id }}</div>
                 <div>user name</div>
                 <div class="user_name_group">
                     <div>=></div>
