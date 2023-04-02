@@ -29,6 +29,9 @@ Route::prefix('users')->group(function (){
     Route::delete('/destroy/{id}', [UserController::class, 'destroy'])->name('users.destroy');
 });
 
+
+// todo ユーザーの投稿機能
+
 // play ground
 // todo API受け取りも試す
 Route::prefix('pg')->group(function (){
