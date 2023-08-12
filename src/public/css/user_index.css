@@ -18,7 +18,7 @@
 .user_list {
   padding: 10px;
 }
-@media (max-width: 480px) {
+@media (max-width: 449px) {
   .user_list .user_id {
     background-color: red;
   }
