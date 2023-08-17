@@ -35,9 +35,11 @@
 <p>テキスト1</p>
 <p style="display: none;">テキスト2</p>
 
+{{-- api取得、人物名 --}}
+<button class="name_list_button">人物名取得 コンソールで確認</button>
+
 
 @endsection
-
 
 
 {{-- jQurey --}}
@@ -48,7 +50,7 @@
 $('.appendTest').click(function(){
     console.log("aaa");
     $('ul').append('<li>test');
-})
+});
 
 //　セレクタの指定
 $(function(){
@@ -56,12 +58,39 @@ $(function(){
     $('.sample > li').css('color', 'red');
     $('.sample').children('li').css('color', 'green');
 
-})
+});
 
-// 表示・非表示
-$(function(){
-    $('p:').
-})
+
+// api叩くテスト、人物名取得
+$('.name_list_button').click(function(){
+    console.log('人物名取得するよー');
+    async function callApi(){
+        const res = await fetch("https://jsonplaceholder.typicode.com/users");
+        const users = await res.json();
+        return users;
+    }
+
+    async function main(){
+        const user_list = await callApi();
+
+        $.each(user_list, function(index, users){
+            console.log('index:' + index + " --- user email: " + users.name);
+        });
+
+    }
+
+    main();
+
+});
+
+
+
+
+
+// const users = callApi();
+// console.log(users);
+
+
 
 </script>
 @endsection
